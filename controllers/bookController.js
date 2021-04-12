@@ -3,7 +3,7 @@ const { Book } = require("../models");
 const getAllBooks = async (req, res) => {
   try {
     const books = await Book.findAll();
-    res.json({ books });
+    res.json({ books: books });
   } catch (error) {
     res.status(400).json({ msg: "Something went wrong! :(" });
   }
