@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
     "dev": "nodemon index",
-    "heroku-postbuild": "cd frontend && npm install && npm start"
+    "heroku-postbuild": "cd frontend && yarn && npm start"
   },
   "keywords": [],
   "author": "",
