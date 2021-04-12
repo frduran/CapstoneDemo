@@ -1,0 +1,48 @@
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+<body>
+
+    <div class="container">
+        <br>
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title"> Books </h1>
+                </div>
+            </div>
+        </section>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="columns is-desktop is-multiline">
+            <% books.forEach((book)=> { %>
+                <div class="column is-3">
+                    <div class="card">
+
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-5"><%- book.name %></p>
+                                        <p class="title is-6"><%- book.author %></p>
+                                            <p class="title is-6"><%- book.genre
+                                                    %></p>
+                                                <p class="title is-6"><%-
+                                                        book.year %></p>
+
+                                                </div>
+                                            </div>
+
+
+                                            <a href="<%- bookShowPath(book) %>">Ir
+                                                a carrera</a>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <% }); %>
+                                </div>
+                            </div>
+                        </body>
