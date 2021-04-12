@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { FindBook, AllBooks } from "./Views/Book";
 import AddBook from "./Views/AddBook";
 import Header from "./components/Header";
-import axios from "axios";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -23,7 +22,11 @@ function App() {
     <div className='App'>
       <Header />
       <Router>
-        <Link to='/addbook'> Add book</Link>
+        <div>
+          <Link to='/addbook'> Add book</Link>
+        </div>
+        <Link to='/books/'> Get all books</Link>
+        <div></div>
         <Switch>
           <Route path='/books/:id' className='text-blue-500'>
             <FindBook />

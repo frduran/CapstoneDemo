@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import {
+  useParams,
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 
 export function FindBook() {
   const { id } = useParams();
@@ -40,7 +47,9 @@ export function AllBooks() {
     return (
       <div>
         {books.books.map((book) => (
-          <h1>{book.name}</h1>
+          <div>
+            <a href={"/books/" + book.id}>{book.name}</a>
+          </div>
         ))}
       </div>
     );
